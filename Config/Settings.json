@@ -1,1 +1,4 @@
-{"gravity":9.6,"sensitivity":10}
+{
+	"gravity": 8.9,
+	"sensitivity": 10
+}
