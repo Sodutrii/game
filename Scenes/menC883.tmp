@@ -1,0 +1,185 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3jy5vlwm86vd"]
+
+[ext_resource type="Script" path="res://Scripts/MenuScript.gd" id="1_mwvbw"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mwvbw")
+
+[node name="PauseMenu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -171.0
+offset_right = 304.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/MarginContainer"]
+layout_mode = 2
+mouse_filter = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 21
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PauseMenu/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]This the menu brudda[/center]"
+fit_content = true
+
+[node name="Settings" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Settings"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 21
+
+[node name="Exit Menu" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Exit Menu"
+
+[node name="Quit Game" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Quit Game"
+
+[node name="Quit Game but green" type="Button" parent="PauseMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 1, 0, 1)
+text = "Quit Game but green"
+
+[node name="SettingsMenu" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -171.0
+offset_right = 304.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsMenu/MarginContainer"]
+layout_mode = 2
+mouse_filter = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="SettingsMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 21
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SettingsMenu/MarginContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Settings O.o[/center]"
+fit_content = true
+
+[node name="Sensitivity RichTextLabel" type="RichTextLabel" parent="SettingsMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[center]Sensitivity: 10[/center]"
+fit_content = true
+
+[node name="Sensitivity HSlider" type="HSlider" parent="SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+step = 0.1
+
+[node name="Gravity RichTextLabel" type="RichTextLabel" parent="SettingsMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[center]Gravity: 9.8[/center]"
+fit_content = true
+
+[node name="Gravity HSlider" type="HSlider" parent="SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+min_value = -9.8
+max_value = 19.6
+step = 0.1
+value = 9.8
+
+[node name="Back" type="Button" parent="SettingsMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Back"
+
+[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/Settings" to="." method="SwitchMenu"]
+[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/MarginContainer2/Exit Menu" to="." method="ExitMenu"]
+[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/Quit Game" to="." method="QuitGame"]
+[connection signal="pressed" from="PauseMenu/MarginContainer/VBoxContainer/Quit Game but green" to="." method="QuitGame"]
+[connection signal="value_changed" from="SettingsMenu/MarginContainer/VBoxContainer/Sensitivity HSlider" to="." method="SensitivitySlider"]
+[connection signal="value_changed" from="SettingsMenu/MarginContainer/VBoxContainer/Gravity HSlider" to="." method="SensitivitySlider"]
+[connection signal="pressed" from="SettingsMenu/MarginContainer/VBoxContainer/Back" to="." method="SwitchMenu"]
