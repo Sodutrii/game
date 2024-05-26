@@ -45,11 +45,12 @@ func _attach_hook() -> void:
 	
 	hook_target_position = hook_raycast.get_collision_point()
 	_hook_target_normal = hook_raycast.get_collision_normal()
-	
+	SetGrapplePoint()
 	hook_attached.emit()
 	
 func _retract_hook() -> void:
 	is_hook_launched = false
+	RemoveGrapplePoint()
 	hook_detached.emit()
 	
 func _handle_hook(delta: float) -> void:
@@ -61,5 +62,15 @@ func _handle_hook(delta: float) -> void:
 	
 func DisableGrappleWhenPaused(isOpen: bool):
 	pauseMenuOpen = isOpen
-
-
+	
+	
+	#temp testing functoin plz delete
+func SetGrapplePoint():
+	var grapplePoint: MeshInstance3D = $"../../../../GrapplePointfortestingplzdelete"
+	grapplePoint.visible = true
+	grapplePoint.transform.origin = hook_target_position
+	
+	#temp testing functoin plz delete
+func RemoveGrapplePoint():
+	var grapplePoint: MeshInstance3D = $"../../../../GrapplePointfortestingplzdelete"
+	grapplePoint.visible = false
