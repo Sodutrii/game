@@ -26,6 +26,8 @@ func OpenMenu():
 	mouse_filter = MOUSE_FILTER_STOP
 	visible = true
 	openPauseMenu.emit(true)
+	if not pauseMenu.visible:
+		SwitchMenu()
 
 func ExitMenu():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
