@@ -66,11 +66,12 @@ func DisableGrappleWhenPaused(isOpen: bool):
 	
 	#temp testing functoin plz delete
 func SetGrapplePoint():
-	var grapplePoint: MeshInstance3D = $"../../../../GrapplePointfortestingplzdelete"
+	var grapplePoint: MeshInstance3D = $GrapplePointfortestingplzdelete
 	grapplePoint.visible = true
 	grapplePoint.transform.origin = hook_target_position
 	
 	#temp testing functoin plz delete
 func RemoveGrapplePoint():
-	var grapplePoint: MeshInstance3D = $"../../../../GrapplePointfortestingplzdelete"
+	var grapplePoint: MeshInstance3D = $GrapplePointfortestingplzdelete
 	grapplePoint.visible = false
+	

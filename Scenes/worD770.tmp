@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://diokasbeerhwb"]
+[gd_scene load_steps=16 format=3 uid="uid://diokasbeerhwb"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_2b0q4"]
 [ext_resource type="Script" path="res://Scripts/grapple.gd" id="2_dnf1k"]
 [ext_resource type="PackedScene" uid="uid://b3jy5vlwm86vd" path="res://Scenes/menu.tscn" id="3_xk3y4"]
 [ext_resource type="PackedScene" uid="uid://c4bpx4rsdit27" path="res://Assets/BlenderMeshes/Floating_Island.blend" id="4_vv7jh"]
-[ext_resource type="PackedScene" uid="uid://cy00csjpqhan8" path="res://Scenes/tree_1.tscn" id="5_2yvjv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wj66s"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -120,22 +119,14 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.259165, 2.36479, -0.
 top_level = true
 visible = false
 mesh = SubResource("SphereMesh_3sche")
+skeleton = NodePath("../../../../..")
 
 [node name="Floating_Island" parent="." instance=ExtResource("4_vv7jh")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -2.90768, -32.4393, 1.41938)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.90768, -16.4215, 1.41938)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floating_Island/Icosphere" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floating_Island/Icosphere/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_sqi7d")
-
-[node name="Tree1" parent="." instance=ExtResource("5_2yvjv")]
-transform = Transform3D(-0.0755441, 0, 0.49426, 0, 0.5, 0, -0.49426, 0, -0.0755441, 2.72592, -5.48076, -29.9057)
-
-[node name="Tree3" parent="." instance=ExtResource("5_2yvjv")]
-transform = Transform3D(0.081663, 0, 0.493286, 0, 0.5, 0, -0.493286, 0, 0.081663, 37.6939, 10.3714, -8.62965)
-
-[node name="Tree2" parent="." instance=ExtResource("5_2yvjv")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.560575, 6.0559, 27.5666)
 
 [editable path="Floating_Island"]
