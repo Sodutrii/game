@@ -133,7 +133,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46963, 0)
 current = true
 
 [node name="RayCast3D" type="RayCast3D" parent="Player/Head/Camera3D"]
-target_position = Vector3(0, 0, -100)
+target_position = Vector3(0, 0, -1000)
 debug_shape_custom_color = Color(1, 0.257161, 0.817158, 1)
 
 [node name="grapple" type="MeshInstance3D" parent="Player/Head/Camera3D"]
