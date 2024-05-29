@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://diokasbeerhwb"]
+[gd_scene load_steps=21 format=3 uid="uid://diokasbeerhwb"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_2b0q4"]
 [ext_resource type="Script" path="res://Scripts/TempDiagnosticsPanelScript.gd" id="1_exy6d"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://cy00csjpqhan8" path="res://Scenes/tree_1.tscn" id="5_2yvjv"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/PlayerMoveState.gd" id="5_jwj0c"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/PlayerGrappleState.gd" id="7_bjkgb"]
-[ext_resource type="Script" path="res://Scripts/StateMachine/PlayerMenuState.gd" id="8_n61tq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wj66s"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -115,9 +114,6 @@ script = ExtResource("5_jwj0c")
 
 [node name="PlayerGrappleState" type="Node" parent="Player/FiniteStateMachine"]
 script = ExtResource("7_bjkgb")
-
-[node name="PlayerMenuState" type="Node" parent="Player/FiniteStateMachine"]
-script = ExtResource("8_n61tq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 mesh = SubResource("CapsuleMesh_5kfcq")
